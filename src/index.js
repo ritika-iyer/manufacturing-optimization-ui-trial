@@ -1,62 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Ap from "./Ap";
-/*import Faker from 'faker';
-import CommentDetail from './CommentDetail';*/
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
 
-import ApprovalCard from "./ApprovalCard";
-import { LineChart, PieChart, ColumnChart, BarChart } from "react-chartkick";
-import "chart.js";
-import BasicTable from "./Table";
 
-const App = () => {
-  return (
-    <div>
-      {/*<ApprovalCard />*/}
-      <div>
-        <h1 style={{ textAlign: "center", fontFamily: "Bahnschrift Regular" }}>
-          Line Allocation for each Product Family
-        </h1>
-        {/*<PieChart
-          data={[
-            ["Alienware", 44],
-            ["XPS", 23],
-            ["Voltro", 16],
-            ["Umm..uh..what was it again?", 17],
-          ]}
-        />*/}
-      </div>
-      {/*<Ap />*/}
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-      <div style={{ width: "40%", margin: "5% 10%" }}>
-        <div className="row" style={{ backgroundColor: "aliceblue" }}>
-          <div className="col l6" style={{ float: "left" }}>
-            Given time requirement per step:
-            <BasicTable />{" "}
-          </div>
-          <div
-            className="col l6"
-            style={{ float: "right", margin: "-51.5%", marginLeft: "75%" }}
-          >
-            Allocation :
-            <BasicTable />{" "}
-          </div>
-        </div>
-        <br />
-        <br />
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
-        <BarChart
-          data={[
-            ["Alienware", 44],
-            ["XPS", 23],
-            ["Voltro", 16],
-            ["Umm..wut", 17],
-          ]}
-          style={{ width: "20%", margin: "10% 0" }}
-        />
-      </div>
-    </div>
-  );
-};
-
-ReactDOM.render(<App />, document.querySelector("#root"));
